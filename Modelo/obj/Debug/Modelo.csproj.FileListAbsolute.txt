@@ -1,0 +1,6 @@
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Modelo\bin\Debug\Modelo.dll
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Modelo\obj\Debug\Modelo.dll
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Modelo\obj\Debug\Modelo.pdb

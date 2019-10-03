@@ -46,5 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VoucherControlador.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{00b1162f-b669-4a46-a28d-26b6415072e8}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

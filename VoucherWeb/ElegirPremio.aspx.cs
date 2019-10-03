@@ -4,14 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Controlador;
+using Modelo;
 
 namespace VoucherWeb
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        public ProductoControlador producto = new ProductoControlador();
+
+        public void Page_Load(object sender, EventArgs e)
         {
 
+           //foreach (var producto in producto.ListarProducto())
+           // {
+
+           //     Imagen1.ImageUrl = producto.Imagen;
+           // }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

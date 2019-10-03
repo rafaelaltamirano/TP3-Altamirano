@@ -135,6 +135,10 @@
       <Project>{7ADAB91F-323B-40DF-AB58-B639D2CA773F}</Project>
       <Name>Controlador</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{00b1162f-b669-4a46-a28d-26b6415072e8}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

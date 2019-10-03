@@ -4,3 +4,6 @@ C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\obj\Debug\Controlad
 C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
 C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\obj\Debug\Controlador.dll
 C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\bin\Debug\Modelo.dll
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\bin\Debug\Modelo.pdb
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\Controlador\obj\Debug\Controlador.csproj.CopyComplete

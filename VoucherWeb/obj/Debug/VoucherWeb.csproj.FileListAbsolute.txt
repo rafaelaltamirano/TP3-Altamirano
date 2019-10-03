@@ -56,3 +56,5 @@ C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\VoucherWeb\obj\Debug\VoucherWeb
 C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\VoucherWeb\obj\Debug\VoucherWeb.pdb
 C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\VoucherWeb\bin\Controlador.dll
 C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\VoucherWeb\bin\Controlador.pdb
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\VoucherWeb\bin\Modelo.dll
+C:\Users\Rafa\source\repos\TP3-Altamirano-Rafael\VoucherWeb\bin\Modelo.pdb

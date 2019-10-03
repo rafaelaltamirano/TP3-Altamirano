@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Producto
+    public class Producto
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
         public string Imagen { get; set; }

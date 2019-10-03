@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Voucher
+    public class Voucher
     {
         public int Id { get; set; }
         public string CodigoVoucher { get; set; }

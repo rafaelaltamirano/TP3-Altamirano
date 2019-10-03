@@ -10,18 +10,19 @@ namespace VoucherWeb
 {
     public partial class CargarCodigo : System.Web.UI.Page
     {
-        VoucherControlador algo = new VoucherControlador();// control . hace referencia 
+        VoucherControlador voucher = new VoucherControlador();// control . hace referencia 
 
-        protected void Page_Load(object sender, EventArgs e)
+        public void Page_Load(object sender, EventArgs e)
         {
 
+            lblAux.Text = voucher.MostrarCodigo();
         }
-
+        // evento click trae el codigo ingresado y lo guarda en la var codigo 
         protected void Button1_Click(object sender, EventArgs e)
         {
             var codigo = this.inputCodigo.Text.ToString();
 
-            if (algo.ValidarCodigo(codigo))
+            if (voucher.ValidarCodigo(codigo))
             {
                 Response.Redirect("ElegirPremio.aspx");
             }
