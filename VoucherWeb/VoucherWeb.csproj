@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CargarCodigo.aspx" />
+    <Content Include="CargarDni.aspx" />
     <Content Include="DatosGanador.aspx" />
     <Content Include="Global.asax" />
     <Content Include="MiEstilo.css" />
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="CargarCodigo.aspx.designer.cs">
       <DependentUpon>CargarCodigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargarDni.aspx.cs">
+      <DependentUpon>CargarDni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargarDni.aspx.designer.cs">
+      <DependentUpon>CargarDni.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatosGanador.aspx.cs">
       <DependentUpon>DatosGanador.aspx</DependentUpon>

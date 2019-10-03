@@ -3,14 +3,11 @@
 </br>
 
 
-
-
-
 <div class="card">
     <div class="card-body" style="text-align:center" >
         <h5 class="card-title">Ingrese sus Datos</h5>
         <p class="card-text" style="text-align:center" height: 400px; overflow-y: scroll;>
-            <form>
+           <%--<form>--%>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputApellido">Apellido</label>
@@ -46,7 +43,7 @@
                 </div>
               </div>
                 <asp:Button ID="Registrar" runat="server" Text="Button" OnClick="Registrar_Click" />
-            </form>
+          <%--  </form>--%>
         </p>
     </div>
 </div>

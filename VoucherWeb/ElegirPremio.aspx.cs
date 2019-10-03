@@ -12,21 +12,22 @@ namespace VoucherWeb
     public partial class WebForm2 : System.Web.UI.Page
     {
         public ProductoControlador producto = new ProductoControlador();
-
+      
         public void Page_Load(object sender, EventArgs e)
         {
-
-           //foreach (var producto in producto.ListarProducto())
-           // {
-
-           //     Imagen1.ImageUrl = producto.Imagen;
-           // }
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["PremioSeleccion"] = ElegirPremio3.Text;
+            //Session["PremioSeleccion"] = ElegirPremio3.Text;
 
+        }
+
+        protected void BtnPremio_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("CargarDni.aspx");
         }
     }
 }
