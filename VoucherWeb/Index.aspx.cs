@@ -13,5 +13,10 @@ namespace VoucherWeb
         {
 
         }
+
+        protected void BtnIndex_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CargarCodigo.aspx");
+        }
     }
 }

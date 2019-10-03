@@ -19,15 +19,17 @@ namespace VoucherWeb
         protected void BtnDni_Click(object sender, EventArgs e)
         {
             var dniTeclado = this.inputCodigo.Text.ToString();
-
-            if (cliente.ValidarDni(dniTeclado)!=0)
+            long[] validar = new long[2];
+            validar = cliente.ValidarDni(dniTeclado);
+            if (validar[0]!=0)
             {
-                Response.Redirect("DatosGanador.aspx");
+               // en caso de estar el valor en la bdlo mando a datosGanador para precargar los datos 
+                Response.Redirect("DatosGanador.aspx?dniTeclado=" + dniTeclado + "&Id=" + validar[1]);
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "message", "alert('No se encontraron datos');", true);
-
+                // si el valor no esta solo precarga el dni
+                Response.Redirect("DatosGanador.aspx?dniTeclado=" + dniTeclado + "&Bandera=" + 0);
             }
         }
     }

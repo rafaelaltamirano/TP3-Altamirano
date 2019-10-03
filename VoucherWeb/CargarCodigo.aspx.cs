@@ -12,11 +12,6 @@ namespace VoucherWeb
     {
         VoucherControlador voucher = new VoucherControlador();// control . hace referencia 
 
-        public void Page_Load(object sender, EventArgs e)
-        {
-
-            lblAux.Text = voucher.MostrarCodigo();
-        }
         // evento click trae el codigo ingresado y lo guarda en la var codigo 
         protected void Button1_Click(object sender, EventArgs e)
         {

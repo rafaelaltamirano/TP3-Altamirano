@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="VoucherWeb.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<STYLE> a:link {text-decoration: none;} </STYLE>
+    <STYLE> a:link {text-decoration: none;} </STYLE>
 </br>
 <div class="card">
     <div class="card-body" style="text-align:center" >
@@ -17,8 +17,9 @@
 
 </div>
 </br>
-<div class=" text-center"><button type="button" class="btn btn-secondary btn-lg" style=" align-items:center"><a href="CargarCodigo.aspx">Participar</a></button></div>
-
+    <center>
+ <asp:Button ID="BtnIndex" runat="server" Text="Ingresar"  class="btn btn-primary mb-2" OnClick="BtnIndex_Click" />
+</center>
 </asp:Content>
 
 

@@ -14,7 +14,7 @@
 <div class="card">
     <div class="card-body" style="text-align:center">
       
-        <h2> <asp:Label ID="lblAux" runat="server" Text="Label"></asp:Label></h2>
+        <h2>Ingrese el Código de su Voucher</h2>
         <p class="card-text" style="text-align:center" height: 400px; overflow-y: scroll;>
            
             <div class="abs-center">
