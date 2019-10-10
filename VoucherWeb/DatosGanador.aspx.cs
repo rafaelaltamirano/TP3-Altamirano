@@ -84,20 +84,27 @@ namespace VoucherWeb
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+           
             aux = new Cliente();
             // traigo del form los valores ingresados o precargados y se los asigno a una variable cliente
-            long id = (long)Session["idTeclado"];
-            aux.Id = id;
-            aux.Apellido = tbApellido.Text.ToString();
-            aux.Apellido = tbApellido.Text.ToString();
+            try
+            {
+                aux.Dni = Convert.ToInt32(tbDni.Text.ToString());
+                aux.Nombre = tbNombre.Text.ToString();
+                aux.Apellido = tbApellido.Text.ToString();
+                aux.Email = this.tbEmail.Text.ToString();
+                aux.Direccion = this.tbDireccion.Text.ToString();
+                aux.Ciudad = this.tbCiudad.Text.ToString();
+                aux.CodPostal = this.tbCodPostal.Text.ToString();
 
-            aux.Nombre = tbNombre.Text.ToString();
-            aux.Dni = Convert.ToInt32(tbDni.Text.ToString());
-            aux.Email = this.tbEmail.Text.ToString();
-            aux.Direccion = this.tbDireccion.Text.ToString();
-            aux.Ciudad = this.tbCiudad.Text.ToString();
-            aux.CodPostal = this.tbCodPostal.Text.ToString();
+                cliente.Agregar(aux);
+
+                Response.Redirect("Index.aspx");
+            }
+            catch (Exception ex)
+            {
+                throw ex;// tira error cerca de @fecha registroo
+            }
         }
     }
 }

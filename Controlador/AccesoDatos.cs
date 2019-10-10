@@ -60,5 +60,22 @@ namespace Controlador
             cn.Close();
 
         }
+
+        internal void ejecutarAccion()
+        {
+            try
+            {
+                cn.Open();
+                cm.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
