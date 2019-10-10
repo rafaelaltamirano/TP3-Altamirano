@@ -51,7 +51,7 @@
                <%}
              else
             {%>
-              <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" />
+              <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
 
           <%}%>
         </p>

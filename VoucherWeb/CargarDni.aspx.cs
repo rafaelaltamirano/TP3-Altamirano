@@ -23,13 +23,20 @@ namespace VoucherWeb
             validar = cliente.ValidarDni(dniTeclado);
             if (validar[0]!=0)
             {
-               // en caso de estar el valor en la bdlo mando a datosGanador para precargar los datos 
-                Response.Redirect("DatosGanador.aspx?dniTeclado=" + dniTeclado + "&Id=" + validar[1]);
+                // en caso de estar el valor en la bdlo mando a datosGanador para precargar los datos 
+                Session.Add("dniTeclado", dniTeclado);
+                Session.Add("idTeclado", validar[1]);
+                Response.Redirect("DatosGanador.aspx");
+                //Response.Redirect("DatosGanador.aspx?dniTeclad=" + dniTeclado + "&Id=" + validar[1]); esta forma pasa todo de una y redirecciona, consultar
             }
             else
             {
                 // si el valor no esta solo precarga el dni
-                Response.Redirect("DatosGanador.aspx?dniTeclado=" + dniTeclado + "&Bandera=" + 0);
+               // Response.Redirect("DatosGanador.aspx?dniTeclado=" + dniTeclado + "&Bandera=" + 0); esta forma pasa todo de una y redirecciona 
+                Session.Add("dniTeclado", dniTeclado);
+                validar[1] = 0;
+                Session.Add("idTeclado",validar[1]);
+                Response.Redirect("DatosGanador.aspx");
             }
         }
     }

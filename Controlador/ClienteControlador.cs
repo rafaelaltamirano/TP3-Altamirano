@@ -80,6 +80,7 @@ namespace Controlador
             }
 
         }
+        // hacer agregar
         public void Modificar(Cliente Clie)
         {
             AccesoDatos datos = new AccesoDatos();

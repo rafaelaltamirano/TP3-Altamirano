@@ -20,7 +20,7 @@
         <p class="card-text" style="text-align:center" height: 400px; overflow-y: scroll;>
            
             <div class="abs-center">
-                <div class="col-md-4 center-block" style="text-align">
+                <div class="col-md-4 center-block" style:"text-align">
                     <div class="form-group mx-sm-3 mb-2" >
                         <asp:Label ID="lblDni" for="inputDni" runat="server" Text="Label" class="sr-only">DNI</asp:Label>
                      
