@@ -12,17 +12,23 @@ namespace Controlador
     {
         AccesoDatos datos = new AccesoDatos();
 
-        public bool ValidarCodigo(string cod)    
+        public Voucher ValidarCodigo(string cod)    
         {
-        
+            Voucher voucher = new Voucher();
 
             try
             {
-                datos.setearQuery( "select v.id from vouchers as v where v.codigoVoucher=@cod");
+                datos.setearQuery("select id,CodigoVoucher,Estado from vouchers where codigoVoucher = @cod");
                 datos.agregarParametro("cod", cod);
                 datos.ejecutarLector();
-                if (datos.lector.Read()) return true;
-                else return false;
+                if (datos.lector.Read())
+                {
+                    voucher.Id = datos.lector.GetInt64(0);
+                    voucher.CodigoVoucher = datos.lector.GetString(1);
+                    voucher.Estado = datos.lector.GetBoolean(2);
+                } //TODO: Falta hacer que si el voucher ya fue usado muestre cartel o marque en rojo
+                else voucher = null;
+                return voucher;
 
             }
             catch (Exception)
