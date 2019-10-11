@@ -23,7 +23,7 @@
                  <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputDni">DNI</label>
-                    <asp:TextBox ID="tbDni" runat="server" class="form-control" placeholder="Sin Guiones ni Espacios" required></asp:TextBox>
+                    <asp:TextBox ID="tbDni" runat="server" class="form-control" placeholder="Sin Guiones ni Espacios" ReadOnly="true" required></asp:TextBox>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputEmail">Email</label>
@@ -35,7 +35,7 @@
                   <asp:TextBox ID="tbDireccion" runat="server" class="form-control" placeholder="1234 Main St" required></asp:TextBox>
               </div>                       
                <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-mdlong id = Convert.ToInt64(Session["idTeclado"]-6">
                   <label for="inputCiudad">Ciudad</label>
                     <asp:TextBox ID="tbCiudad" runat="server" class="form-control" placeholder="Buenso Aires" required></asp:TextBox>
                 </div>
@@ -44,16 +44,8 @@
                     <asp:TextBox ID="tbCodPostal" runat="server" class="form-control" placeholder="1821" required></asp:TextBox>
                 </div>
               </div>
-            <%if (Convert.ToInt64(Request.QueryString["id"]) != 0)
-                {%>
-                <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="Registrar_Click" />
-              <%--  </form>--%>
-               <%}
-             else
-            {%>
-              <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
-
-          <%}%>
+           
+        <asp:Button ID="btnAceptar" runat="server" Text="Aceptar"  OnClick="btnAceptar_Click"/>
         </p>
     </div>
 </div>

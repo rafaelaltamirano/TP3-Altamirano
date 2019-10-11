@@ -62,7 +62,7 @@ namespace Controlador
                 aux.Direccion = (string)datos.lector["Direccion"];
                 aux.Ciudad = (string)datos.lector["Ciudad"];
                 aux.CodPostal = Convert.ToString(datos.lector["CodigoPostal"]);
-                aux.FechaRegistro =(string)datos.lector["FechaRegistro"];
+                aux.FechaRegistro =(DateTime)datos.lector["FechaRegistro"];
                 
                 
                 return aux;
@@ -85,17 +85,17 @@ namespace Controlador
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearQuery("insert into Clientes values(@dni,@nombre,@apellido,@email,@direccion,@ciudad,@CodigoPostal,@FechaRegistro");           
-                datos.agregarParametro("@dni", Clie.Dni);
-                datos.agregarParametro("@nombre", Clie.Nombre);
-                datos.agregarParametro("@apellido", Clie.Apellido);
-                datos.agregarParametro("@email", Clie.Email);
-                datos.agregarParametro("@direccion", Clie.Direccion);
-                datos.agregarParametro("@ciudad", Clie.Ciudad);
-                datos.agregarParametro("@CodigoPostal", Clie.CodPostal);
+                datos.setearQuery("insert into Clientes values(@dni,@nombre,@apellido,@email,@direccion,@ciudad,@CodigoPostal,@FechaRegistro)");           
+                datos.agregarParametro("dni", Clie.Dni);
+                datos.agregarParametro("nombre", Clie.Nombre);
+                datos.agregarParametro("apellido", Clie.Apellido);
+                datos.agregarParametro("email", Clie.Email);
+                datos.agregarParametro("direccion", Clie.Direccion);
+                datos.agregarParametro("ciudad", Clie.Ciudad);
+                datos.agregarParametro("CodigoPostal", Clie.CodPostal);
                 DateTime myDateTime = DateTime.Now;
                 string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
-                datos.agregarParametro("@FechaRegistro", sqlFormattedDate);
+                datos.agregarParametro("FechaRegistro", sqlFormattedDate);
                 datos.ejecutarAccion();
             }
             catch (Exception)

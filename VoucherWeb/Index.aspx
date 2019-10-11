@@ -2,6 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <STYLE> a:link {text-decoration: none;} </STYLE>
 </br>
+             ;
+           <% int cargadoOk = Convert.ToInt32(Session["cargadoOk"]);
+               if(cargadoOk== 1)
+                  { %> 
+                 <p class="text-success" style="text-align:center">Datos Cargador Correctamente! Gracias por Participar</p>
+                 <% }%>
 <div class="card">
     <div class="card-body" style="text-align:center" >
         <h5 class="card-title">Bases y condiciones</h5>
@@ -18,7 +24,7 @@
 </div>
 </br>
     <center>
- <asp:Button ID="BtnIndex" runat="server" Text="Ingresar"  class="btn btn-primary mb-2" OnClick="BtnIndex_Click" />
+ <asp:Button ID="BtnIndex" runat="server" Text="Participar"  class="btn btn-primary mb-2" OnClick="BtnIndex_Click" />
 </center>
 </asp:Content>
 

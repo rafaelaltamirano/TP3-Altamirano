@@ -16,7 +16,7 @@ namespace Modelo
         public string Direccion { get; set; }
         public string Ciudad { get; set; }
         public string CodPostal { get; set; }
-        public string FechaRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
 
     }
 }
