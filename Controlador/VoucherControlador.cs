@@ -10,10 +10,11 @@ namespace Controlador
 {
     public class VoucherControlador
     {
-       
+        AccesoDatos datos = new AccesoDatos();
+
         public bool ValidarCodigo(string cod)    
         {
-        AccesoDatos datos = new AccesoDatos();
+        
 
             try
             {
@@ -35,7 +36,30 @@ namespace Controlador
             }
             
         }
-        
 
+        public void CargaVoucher(Voucher voucher)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearQuery("update Vouchers set Estado=@estado,IdCliente=@idCliente,idProducto=@idProducto,FechaRegistro=@fechaReg where CodigoVoucher=@CodigoVoucher");
+                datos.agregarParametro("estado", voucher.Estado);
+                datos.agregarParametro("idCliente", voucher.IdCliente);
+                datos.agregarParametro("idProducto", voucher.IdProducto);
+                datos.agregarParametro("FechaReg", voucher.FechaRegistro);
+                datos.agregarParametro("CodigoVoucher", voucher.CodigoVoucher);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }        
     }
 }

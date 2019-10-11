@@ -52,7 +52,10 @@ namespace VoucherWeb
       
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-                aux = new Cliente();
+            aux = new Cliente();
+            //long id = 
+            Voucher auxVoucher = new Voucher();
+            VoucherControlador voucher = new VoucherControlador();
             long id = Convert.ToInt64(Session["idTeclado"]);
             try
             {
@@ -66,9 +69,26 @@ namespace VoucherWeb
                     aux.Ciudad = this.tbCiudad.Text.ToString();
                     aux.CodPostal = this.tbCodPostal.Text.ToString();
               
+                
                 if(id != 0)// si el id tiene datos los precargo
                 {
                     cliente.Modificar(aux);
+                    // si esta todo bien mando un cargo o para la pagina del idex que muestra un mensaje
+                    
+                    // doy de baja el voucher y lo cargo a la vez
+                    auxVoucher.IdCliente = id;
+                    // el producto elegido es traido deelegir premio
+                    auxVoucher.IdProducto = Convert.ToInt64(Session["idProductoElegido"]);
+                    //cambio el estado del voucher para que ya no sea valido 
+                    auxVoucher.Estado = true;
+                    //DateTime myDateTime = DateTime.Now;
+                    //string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                    auxVoucher.FechaRegistro = DateTime.Now; ;
+                    // traigo el voucher elegido desde la pesta;a de cargarCodigo.aspx
+                    auxVoucher.CodigoVoucher =Convert.ToString(Session["codVoucherElegido"]);
+                    voucher.CargaVoucher(auxVoucher);
+
+
                     Session.Add("cargadoOk", 1);
                     Response.Redirect("Index.aspx");
                 }

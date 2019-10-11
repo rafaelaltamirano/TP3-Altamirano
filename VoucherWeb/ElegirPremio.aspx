@@ -17,6 +17,8 @@
                    <div class="card-body text-center">
                     <h5 class="card-title"><% =producto.Titulo%> </h5>
                     <p class="card-text"><% =producto.Descripcion%></p>
+                       
+                   <% Session.Add("idProductoElegido", producto.Id); %> 
                        <asp:Button ID="BtnPremio" runat="server" Text="Elegir"  class="btn btn-primary" OnClick="BtnPremio_Click"/>
   
                 </div>

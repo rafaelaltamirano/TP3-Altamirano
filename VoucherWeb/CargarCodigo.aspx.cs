@@ -19,6 +19,7 @@ namespace VoucherWeb
 
             if (voucher.ValidarCodigo(codigo))
             {
+                Session.Add("codVoucherElegido", codigo);
                 Response.Redirect("ElegirPremio.aspx");
             }
             else
