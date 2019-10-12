@@ -35,7 +35,10 @@
                   <asp:TextBox ID="tbDireccion" runat="server" class="form-control" placeholder="1234 Main St" required></asp:TextBox>
               </div>                       
                <div class="form-row">
-                <div class="form-group col-mdlong id = Convert.ToInt64(Session["idTeclado"]-6">
+
+                   
+                <div class="form-group col-md-6">
+               <%-- <div class="form-group col-mdlong id = Convert.ToInt64(Session["idTeclado"]-6">--%>
                   <label for="inputCiudad">Ciudad</label>
                     <asp:TextBox ID="tbCiudad" runat="server" class="form-control" placeholder="Buenso Aires" required></asp:TextBox>
                 </div>

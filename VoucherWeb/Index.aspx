@@ -4,7 +4,7 @@
 </br>
              ;
            <% int cargadoOk = Convert.ToInt32(Session["cargadoOk"]);
-               if(cargadoOk== 1)
+               if(cargadoOk== 1) /*&& Page.IsPostBack == true)*/
                   { %> 
                  <p class="text-success" style="text-align:center">Datos Cargador Correctamente! Gracias por Participar</p>
                  <% }%>

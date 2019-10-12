@@ -26,7 +26,7 @@ namespace Controlador
                     voucher.Id = datos.lector.GetInt64(0);
                     voucher.CodigoVoucher = datos.lector.GetString(1);
                     voucher.Estado = datos.lector.GetBoolean(2);
-                } //TODO: Falta hacer que si el voucher ya fue usado muestre cartel o marque en rojo
+                } 
                 else voucher = null;
                 return voucher;
 

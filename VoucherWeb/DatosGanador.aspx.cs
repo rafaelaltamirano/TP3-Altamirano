@@ -19,6 +19,7 @@ namespace VoucherWeb
            
             try
             {
+                // iSpOSTbACK Dice si la pagina fue recargada o no
                 if (Page.IsPostBack == false)
                 {
                     long id = (long)Session["idTeclado"];
